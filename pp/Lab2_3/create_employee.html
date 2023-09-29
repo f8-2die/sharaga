@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создание нового сотрудника</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<label for="employee-name">Имя сотрудника:</label>
+<input type="text" id="employee-name" name="employee-name" value=""><br>
+<button type="button" id="save-employee">Сохранить</button>
+<script src="script.js"></script>
+<a href="index.html">Назад</a>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var employeeName = urlParams.get('employee-name');
+    if (employeeName) {
+        document.getElementById('employee-name').value = employeeName;
+    }
+</script>
+</body>
+</html>

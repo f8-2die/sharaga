@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма поиска сотрудников</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form action="index.html">
+    <label for="employee-number">Номер сотрудника:</label>
+    <input type="text" id="employee-number" name="employee-number"><br>
+    <button type="submit" id="submit-number">Поиск по номеру</button><br><br>
+    <label for="employee-name">Имя сотрудника:</label>
+    <input type="text" id="employee-name" name="employee-name"><br>
+    <button type="submit" formaction="create_employee.html" formmethod="get" name="search-by-name">Поиск по имени</button>
+    <button type="button" onclick="showAllEmployees()">Показать всех сотрудников</button><br>
+    <a href="#">Создать нового сотрудника</a><br>
+    <table>
+        <thead>
+        <tr>
+            <th id="checkbox-column"></th>
+            <th id="employee-number-column">Номер сотрудника</th>
+            <th id="employee-name-column">Имя сотрудника</th>
+            <th id="position-column">Должность</th>
+            <th id="hire-date-column">Дата принятия на работу</th>
+            <th id="department-column">Департамент</th>
+            <th id="delete-column"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">1</a></td>
+            <td>Ryan Gosling</td>
+            <td>Водитель</td>
+            <td>01.01.2020</td>
+            <td>Отдел "драйв"</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">2</a></td>
+            <td>Tyler Durden</td>
+            <td>Разработчик</td>
+            <td>01.02.2020</td>
+            <td>Отдел разработки</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">3</a></td>
+            <td>Giga Chad</td>
+            <td>Разработчик</td>
+            <td>01.02.2020</td>
+            <td>Отдел разработки</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">4</a></td>
+            <td>American Psycho</td>
+            <td>Дизайнер</td>
+            <td>01.02.2020</td>
+            <td>Отдел дизайна</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">5</a></td>
+            <td>Karl Son</td>
+            <td>Дизайнер</td>
+            <td>01.02.2020</td>
+            <td>Отдел дизайна</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">6</a></td>
+            <td>Shrek Fionovich </td>
+            <td>Менеджер</td>
+            <td>01.02.2020</td>
+            <td>Отдел продаж</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">7</a></td>
+            <td>Lena Golovach</td>
+            <td>Менеджер</td>
+            <td>01.02.2020</td>
+            <td>Отдел продаж</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">8</a></td>
+            <td>Ramzan Kadirov</td>
+            <td>Душа компании</td>
+            <td>01.02.2020</td>
+            <td>Отдел тимбилдинга</td>
+            <td><a href="#DonDon">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">9</a></td>
+            <td>Barbie Kenovna</td>
+            <td>Локализатор</td>
+            <td>01.02.2020</td>
+            <td>Отдел феминитивов</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="#">10</a></td>
+            <td>Billy Herrington</td>
+            <td>Икона компании</td>
+            <td>01.02.2020</td>
+            <td>Отдел вдохновления</td>
+            <td><a href="#Delete">Удалить</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
