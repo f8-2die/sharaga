@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000000;
+    }
+    header {
+    background: rgb(226, 94, 77);
+    height: 100px;
+    width: 100%;
+    }
+    aside {
+    background: #e05200;    
+    width: 10%;       
+    height: 400px;
+    }
+    #left{
+        float: left;
+    }
+    #right{
+        float: right;
+    }
+    #content {
+    background: rgb(25, 153, 170);
+    float: left;
+    width: 80%;
+    height: 400px;
+    }
+    footer {
+       
+    color: rgb(0, 0, 0);
+    height: 80px;
+    width: 50%;
+    }
+    #footer1{
+        float: left;
+        background: #8970e2;
+    }
+    #footer2{
+        float: right;
+        background: #333136;
+    }
+    

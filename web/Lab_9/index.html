@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ларкин 13</title>
+    <style>
+        body tr{
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="#f2e8c9">
+    <h1 align="center">Лабораторная работа №9</h1>
+    <div align="center">
+        <img src="stethom.png" alt="stethom">
+        <br>
+        <p>
+            Безнадежно - это когда пересолил пельмени. Остальное можно исправить<br>
+            <p align="right"><a href="https://ru.wikipedia.org/wiki/Стейтем,_Джейсон">Джейсон Стетхем</a>
+            </p><br>            
+        </p>
+    </div>
+    <ol type="i">
+        <li>Зима</li>
+        <li>Весна</li>
+        <li>Лето</li>
+            <UL type="disc">
+                <li>Июнь</li>
+                <li>Июль</li>
+                <li>Август</li>
+            </UL>
+        <li>Осень</li>
+    </ol>
+    <table width="500" height="250" border="2">
+        <tbody>
+            <tr>
+                <td>ячейка</td>
+                <td>ячейка</td>
+                <td rowspan="3">ячейка</td>
+                <td rowspan="3">ячейка</td>
+                <td>ячейка</td>
+                <td>ячейка</td>
+            </tr>
+            <tr>                
+                <td colspan="2">ячейка</td>
+                <td colspan="2">ячейка</td>                
+            </tr>
+            <tr>
+                <td>ячейка</td>
+                <td>ячейка</td>
+                <td>ячейка</td>
+                <td>ячейка</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <textarea rows="4" cols="50" placeholder="абоба">
+Города: Омск,
+Новосибирск, Томск
+      </textarea>
+    <br>    
+    <br>
+    <b>Выберите город</b>
+    <br><br>     
+    <input name="city" type="radio" value="Om">
+    Омск
+    <br>
+    <input name="city" type="radio" value="Nov">
+    Новосибирск
+    <br>
+    <input name="city" type="radio" value="Tom">
+    Томск
+    <br>
+    <p>
+        <b>Введите пароль</b><br> 
+        <br>
+        <input type="password" placeholder="До 32-х символов">
+    </p>
+    <b>Выберите город</b><br><br> 
+    <select id="selectCity">
+        <option value="Om">Омск</option>        
+        <option value="Nov">Новосибирск</option>        
+        <option value="Tom">Томск</option>        
+    </select>
+    <br>
+    <p>
+        <input type="button" value="Отправить">
+        <input type="button" value="Сбросить">
+    </p>
+</body>
+</html>
