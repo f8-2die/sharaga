@@ -1,0 +1,121 @@
+h1 {    
+    color: #a65500;
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+  }
+  body {
+    background-image: url('pic.jpg');
+    background-repeat: repeat; 
+  }
+  form {
+    background-color: #eb9e4d;    
+    padding: 20px;
+    border: 1px solid #925008;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  input[type="text"]::placeholder {    
+    background-color: #f3bf87;
+    font-size: 24px;
+    font-family: 'Caveat', cursive;     
+  }  
+  input[type="text"] {
+    color: #925008;
+    padding: 10px;
+    background-color: #f3bf87;
+    border: 1px  #b16f29;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #a65500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    font-size: 24px;
+    font-family: 'Caveat', cursive; 
+  }
+  button:hover {
+    background-color: #df984d; /* Измененный цвет фона при наведении */
+  }
+
+  table {    
+    border-collapse: collapse;    
+    width: 36%;
+    margin: 0 auto;
+  }
+  
+  th {
+    background-color: #ffa240;
+    color: #333;
+    padding: 8px;    
+    text-align: center;   
+    width: 10%; 
+          
+  }
+
+  tr, td  {
+    background-color: #e6e6e6;
+    color: #572e02;      
+    border: 1px solid #a65500;
+    padding: 8px;    
+    text-align: center;
+    
+  }
+  th{
+    font-size: 28px;    
+  }
+  td{
+    font-size: 24px;
+    color: #572e02;
+  }
+  th, td, th {
+    font-family: 'Caveat', cursive;
+  }
+
+ 
+  .tasks tbody tr td:nth-child(1) {
+    background-color: #ffbb73; /* Цвет фона для первого столбца */
+  }
+  
+  .tasks tbody tr td:nth-child(2) {
+    background-color: #f8ae5e; /* Цвет фона для второго столбца */
+  }
+  
+  .tasks tbody tr td:nth-child(3) {
+    background-color: #f19f46; /* Цвет фона для третьего столбца */
+  }
+
+  .task input[type="button"] {
+    background-color: #a65500; /* Цвет фона кнопки "Удалить" */
+    color: #fff; /* Цвет текста кнопки "Удалить" */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .task input[type="button"]:hover {
+    background-color: #df984d; /* Измененный цвет фона при наведении */
+  }
+
+  .task input[type="checkbox"] {
+    margin-right: auto; /* Расстояние между маркером и текстом задачи */
+  }
+  
+  /* Стиль для текста задачи (флажка), когда задача выполнена */
+.task input[type="checkbox"]:checked + .title-task {
+    text-decoration: line-through; /* Зачеркнутый текст, когда задача выполнена */
+    color: #c08b57; /* Цвет текста для выполненных задач */
+  }
+
+  .custom-link {
+    font-size: 20px;
+    font-family: 'Caveat', cursive; 
+    color: #b16f29;
+  }
