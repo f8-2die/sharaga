@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Добавление задачи</title>    
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>    
+  <h1>
+    Добавление задачи
+    <button id="theme-toggle-button" onclick="toggleTheme()">Переключить тему</button>
+  </h1>
+  <p align="center"><a href="tasks.html" class="custom-link">Перейти к задачам</a></p>
+  <form id="add-task">
+    <input name="title" class="zalupa" type="text" placeholder="Введите задачу" /> 
+    <button type="button" id="add-button">Я кнопка</button>
+  </form>
+
+  <script>
+    function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+  }
+    const addButton = document.querySelector('#add-button');
+    addButton.addEventListener('click', () => {
+      const input = document.querySelector('input[name="title"]');
+      const value = input.value;
+  
+      // Открываем файл tasks.html в новой вкладке с параметром task
+      const newWindow = window.open(`tasks.html?task=${encodeURIComponent(value)}`, '_blank');
+    });
+  </script>
+</body>
+</html>

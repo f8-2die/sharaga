@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>Список задач</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>
+    Список задач
+    <button id="theme-toggle-button" onclick="toggleTheme()">Переключить тему</button>
+  </h1>
+  <p align="center"><a href="add_task.html" class="custom-link">добавить новую?</a></p>
+
+<table class="tasks">
+  <thead>
+  <tr>
+    <th>Задачи</th>
+    <th>В работе</th>
+    <th>Выполненные</th>
+  </tr>
+  </thead>
+
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class="task">
+      <input type="checkbox" id="task1" />
+      <div class="title-task" for="task1">Задача 1</div>
+      <div class="control-task">
+        <input type="button" class="delete-button" value="Удалить" />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    
+    <td class="task">
+      <input type="checkbox" id="task2" />
+      <div class="title-task" for="task2">Задача 2</div>
+      <div class="control-task">
+        <input type="button" class="delete-button" value="Удалить" />
+      </div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+   
+    <td class="task">
+      <input type="checkbox" id="task3" />
+      <div class="title-task" for="task3">Задача 3</div>
+      <div class="control-task">
+        <input type="button"  value="Удалить" class="delete-button" />
+      </div>
+    </td>
+  <td></td>
+  <td></td>
+  </tr>
+  
+</tbody>
+</table>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+  }
+
+
+function addTaskToTable(taskTitle) {
+  // Получаем ссылку на tbody в таблице
+  const tableBody = document.querySelector('.tasks tbody');
+
+  // Создаем новую строку
+  const newRow = tableBody.insertRow();
+
+  // Создаем ячейку для объединения чекбокса, названия задачи и кнопки удаления
+  const combinedCell = newRow.insertCell();
+  const combinedCell2 = newRow.insertCell();
+  const combinedCell3 = newRow.insertCell();
+  // Создаем контейнер для чекбокса, названия задачи и кнопки удаления
+  const taskContainer = document.createElement('div');
+  taskContainer.classList.add('task');
+
+  // Создаем чекбокс
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  taskContainer.appendChild(checkbox);
+
+  // Создаем название задачи
+  const title = document.createElement('div');
+  title.textContent = taskTitle;
+  title.classList.add('title-task');
+  taskContainer.appendChild(title);
+
+  // Создаем кнопку удаления
+  const deleteButton = document.createElement('input');
+  deleteButton.type = 'button';
+  deleteButton.value = 'Удалить';
+  deleteButton.classList.add('delete-button');
+  taskContainer.appendChild(deleteButton);
+
+  // Помещаем контейнер в ячейку
+  combinedCell.appendChild(taskContainer);
+
+ const deleteButtons = document.querySelectorAll('.delete-button');
+
+// Добавляем обработчик события на каждую кнопку "Удалить"
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Находим родительскую строку (задачу) и удаляем её
+    const taskRow = button.closest('tr');
+    taskRow.remove();
+  });
+});
+
+
+  // Помещаем контейнер в ячейку
+  combinedCell.appendChild(taskContainer);
+  
+
+  // Сохраняем последнюю задачу в локальное хранилище
+  saveLastTaskToLocalStorage(taskTitle);
+
+
+
+
+
+}
+
+// Функция для загрузки последней задачи из локального хранилища
+function loadLastTaskFromLocalStorage() {
+  const lastTask = localStorage.getItem('lastTask');
+
+  // Если есть сохраненная задача, добавляем её в таблицу
+  if (lastTask) {
+    addTaskToTable(lastTask);
+  }
+}
+
+// При загрузке страницы загружаем последнюю задачу из локального хранилища
+window.onload = loadLastTaskFromLocalStorage;
+
+
+// Получаем параметры из URL
+const urlParams = new URLSearchParams(window.location.search);
+const newTask = urlParams.get('task');
+
+// Добавляем задачу, если есть новое задание
+if (newTask) {
+  addTaskToTable(decodeURIComponent(newTask));
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
