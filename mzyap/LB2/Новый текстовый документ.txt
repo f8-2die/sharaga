@@ -1,0 +1,8 @@
+mvk 0E34F5B1h,a1;
+mvklh 0E34h,a1;
+mvk 50h,a2;
+stw a1,* +a2[12];
+mvk 48,a0;
+ldb * ++a2[a0],a3;
+nop 4;
+mv a3,a1; 

@@ -1,0 +1,208 @@
+/* Стили для заголовка */
+h1 {
+    color: #A64600;
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Caveat', cursive;
+}
+.ThemBut{
+    text-align: center; 
+}
+.ThemBut button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+/* Hover-эффект для кнопок удаления */
+.ThemBut button:hover {
+    background-color: #976e69;
+    color: white;
+}
+
+/* Оформление кнопки добавить новую задачу */
+#newTaskButton {
+    text-align: center;   
+}
+#newTaskButton button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+#newTaskButton button:hover {
+    background-color: #976e69;
+    color: white;
+}
+
+body {
+    background-image: url('pic.jpg');
+    background-repeat: repeat; 
+}
+
+/* Скрываем модуль по умолчанию */
+.hidden {
+    display: none;
+}
+/* Оформление модуля */
+#taskModule {    
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #a74605;
+    margin-top: 20px;
+    color: #A64600;
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+}
+#taskModule button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+#taskModule button:hover{
+    background-color: #976e69;
+    color: white;
+}
+#taskModule ::placeholder{
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+
+/* Добавляем перечеркивание для текста */
+.completed span {
+    text-decoration: line-through;
+    color: #775f4f;
+}
+
+/* Стили для таблицы и заголовков */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Caveat', cursive;
+
+}
+
+th {
+    background-color: #fcb37e;
+    color: #7e3602;
+    padding: 15px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Стили для строк таблицы */
+table tr {
+    background-color: #f8e0cf;
+    color: #A64600;
+    text-align: center;
+    border-bottom: 1px solid #41281d;
+    font-size: 26px;
+}
+
+/* Стили для ячеек таблицы */
+table td {
+    padding: 15px;
+    border: 1px solid #3b2018; /* Границы ячеек */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Стили для ячеек с задачами */
+.taskCell span {
+    font-weight: bold;
+}
+
+/* Перечеркивание текста для выполненных задач */
+.completed span {
+    text-decoration: line-through;
+}
+
+/* Стили для кнопок "Удалить" */
+table td button {
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    margin-left: 10px;
+}
+/* Hover-эффект для кнопок удаления */
+table td button:hover {
+    background-color: #976e69;
+    color: white;
+}
+
+
+/* Стили для чекбокса */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+/* Стиль для чекбокса при наведении */
+input[type="checkbox"]:hover {
+    background-color: #f0f0f0;
+}
+/* Скрыть стандартный чекбокс */
+input[type="checkbox"]::before {
+    content: "✘"; /* Символ крестика */
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: #ccc; /* Цвет символа (неактивный) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Отображаем символ крестика при выборе */
+input[type="checkbox"]:checked::before {
+    color: #337ab7; /* Цвет символа при выборе (активный) */
+}
+
+
+
+
+table tr td:nth-child(4n-2) {
+    background-color: #f7cbab; /* Цвет для второгго столбца */
+}
+/* Применяем разные цвета для второго и четвертого столбцов */
+table tr td:nth-child(4n-1) {
+    background-color: #f8c097; /* Цвет для третьего столбца */
+}
+.dark-theme table tr td:nth-child(4n-2) {
+    background-color: #5a5753; /* Цвет для второгго столбца */
+}
+/* Применяем разные цвета для второго и четвертого столбцов */
+.dark-theme table tr td:nth-child(4n-1) {
+    background-color: #333231; /* Цвет для третьего столбца */
+}
+

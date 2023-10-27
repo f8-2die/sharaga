@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <h1>Список задач</h1>
+  <div id="newTaskButton"> 
+  <button onclick="toggleTaskModule()">Добавить новую</button>
+  </div>
+
+  <div id="taskModule" class="hidden">
+    <h2>Новая задача:</h2>    
+    <form>
+      <input id="taskInput" type="text" placeholder="Введите вашу задачу">
+      <button type="button" onclick="saveTask()">Добавить</button>
+    </form>
+  </div>
+
+<table id="taskTable" class="tasks" >
+    <thead>
+        <tr>
+          <th>Задачи</th>
+          <th>В работе</th>
+          <th>Выполненные</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+<script src="script.js"></script>
+</body>
+</html>
