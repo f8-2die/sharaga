@@ -1,5 +1,5 @@
 {
-  "name": "vue-chat-app",
+  "name": "simple-chat-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,14 @@
     "core-js": "^3.8.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "vue": "^3.2.13",
-    "websocket": "^1.0.34",
+    "http-proxy-middleware": "^2.0.6",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
+    "vue": "^3.3.8",
+    "vue-native-websocket": "^2.0.15",
+    "vue-socket.io": "^3.0.10",
+    "vue3-websocket": "^1.0.11",
     "ws": "^8.14.2"
   },
   "devDependencies": {

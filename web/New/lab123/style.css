@@ -1,183 +1,208 @@
-h1 {    
-    color: #a65500;
+/* Стили для заголовка */
+h1 {
+    color: #A64600;
     text-align: center;
     font-size: 54px;
     font-family: 'Caveat', cursive;
-    font-weight: bold;
-  }
-  body {
+}
+.ThemBut{
+    text-align: center; 
+}
+.ThemBut button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+/* Hover-эффект для кнопок удаления */
+.ThemBut button:hover {
+    background-color: #976e69;
+    color: white;
+}
+
+/* Оформление кнопки добавить новую задачу */
+#newTaskButton {
+    text-align: center;   
+}
+#newTaskButton button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+#newTaskButton button:hover {
+    background-color: #976e69;
+    color: white;
+}
+
+body {
     background-image: url('pic.jpg');
     background-repeat: repeat; 
-  }
-  form {
-    background-color: #eb9e4d;    
-    padding: 20px;
-    border: 1px solid #925008;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-  input[type="text"]::placeholder {    
-    background-color: #f3bf87;
-    font-size: 24px;
-    font-family: 'Caveat', cursive;     
-  }  
-  input[type="text"] {
-    color: #925008;
-    padding: 10px;
-    background-color: #f3bf87;
-    border: 1px  #b16f29;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  button {
-    background-color: #a65500;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-    font-size: 24px;
-    font-family: 'Caveat', cursive; 
-  }
-  button:hover {
-    background-color: #df984d; /* Измененный цвет фона при наведении */
-  }
+}
 
-  table {    
-    border-collapse: collapse;    
-    width: 36%;
-    margin: 0 auto;
-  }
-  
-  th {
-    background-color: #ffa240;
-    color: #333;
-    padding: 8px;    
-    text-align: center;   
-    width: 10%; 
-          
-  }
-
-  tr, td  {
-    background-color: #e6e6e6;
-    color: #572e02;      
-    border: 1px solid #a65500;
-    padding: 8px;    
+/* Скрываем модуль по умолчанию */
+.hidden {
+    display: none;
+}
+/* Оформление модуля */
+#taskModule {    
     text-align: center;
-    
-  }
-  th{
-    font-size: 28px;    
-  }
-  td{
-    font-size: 24px;
-    color: #572e02;
-  }
-  th, td, th {
+    padding: 20px;
+    border: 1px solid #a74605;
+    margin-top: 20px;
+    color: #A64600;
     font-family: 'Caveat', cursive;
-  }
-
- 
-  .tasks tbody tr td:nth-child(1) {
-    background-color: #ffbb73; /* Цвет фона для первого столбца */
-  }  
-  .tasks tbody tr td:nth-child(2) {
-    background-color: #f8ae5e; /* Цвет фона для второго столбца */
-  }  
-  .tasks tbody tr td:nth-child(3) {
-    background-color: #f19f46; /* Цвет фона для третьего столбца */
-  }
-
-
-  .delete-button{ /* дизайн для кнопок удалить */
-    background-color: #a65500; 
-    color: #fff; 
+    font-size: 36px;
+}
+#taskModule button{
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
-  }
-  .delete-button:hover { /* Измененный цвет фона при наведении */
-    background-color: #df984d; 
-  }
-
-  .task input[type="checkbox"] {
-    margin-right: auto; /* Расстояние между маркером и текстом задачи */
-  }  
-  /* Стиль для задачи, когда она выполнена */
-  .task input[type="checkbox"]:checked + .title-task {
-    text-decoration: line-through; /* Зачеркнутый текст, когда задача выполнена */
-    color: #c08b57;
-  }
-
-  .custom-link { /* для ссылок*/
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
     font-size: 20px;
-    font-family: 'Caveat', cursive; 
-    color: #b16f29;
-  }
-
-  body.dark-theme {
-    background-image: url('dark_background.jpg'); /* Замените на свою картинку для темной темы */
-  }
-  body.dark-theme button {
-    background-color: #726161; /* Изменяем цвет фона кнопок */
-    color: #bdb6b6; /* Изменяем цвет текста на кнопках */
-  }
-  body.dark-theme button:hover {
-    background-color: #3d3c3c; /* Изменяем цвет фона кнопок */
-    color: #bdb6b6; /* Изменяем цвет текста на кнопках */
-  }
-  .dark-theme .delete-button {
-    background-color: #726161; /* Новый цвет фона для кнопок с классом delete-button в темной теме */
-    color: #d8d5d5; /* Новый цвет текста для кнопок с классом delete-button в темной теме */
-  }
-  .delete-button:hover { /* Измененный цвет фона при наведении */
-    background-color: #4b4343; 
-  }
-
-  .dark-theme .tasks tbody tr td:nth-child(1) {
-    background-color: #8f8d91; /* Цвет фона для первого столбца */
-  }  
-  .dark-theme .tasks tbody tr td:nth-child(2) {
-    background-color: #7a777a; /* Цвет фона для второго столбца */
-  }  
-  .dark-theme .tasks tbody tr td:nth-child(3) {
-    background-color: #575657; /* Цвет фона для третьего столбца */
-  }
-  .dark-theme .title-task{
-    color: white
-  }
-  .dark-theme th{
+}
+#taskModule button:hover{
+    background-color: #976e69;
     color: white;
-    background-color: #2c2b2b;
-  }
-  .dark-theme td{          
-    border: 1px solid #ffffff;  
-  }
-  .dark-theme tr{          
-    border: 1px solid #ffffff;  
-  }
+}
+#taskModule ::placeholder{
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
 
-  .dark-theme .custom-link { /* для ссылок*/
-    color: #ffffff;
-  }
-  .dark-theme h1 {    
+
+/* Добавляем перечеркивание для текста */
+.completed span {
+    text-decoration: line-through;
+    color: #775f4f;
+}
+
+/* Стили для таблицы и заголовков */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Caveat', cursive;
+
+}
+
+th {
+    background-color: #fcb37e;
+    color: #7e3602;
+    padding: 15px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Стили для строк таблицы */
+table tr {
+    background-color: #f8e0cf;
+    color: #A64600;
+    text-align: center;
+    border-bottom: 1px solid #41281d;
+    font-size: 26px;
+}
+
+/* Стили для ячеек таблицы */
+table td {
+    padding: 15px;
+    border: 1px solid #3b2018; /* Границы ячеек */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Стили для ячеек с задачами */
+.taskCell span {
+    font-weight: bold;
+}
+
+/* Перечеркивание текста для выполненных задач */
+.completed span {
+    text-decoration: line-through;
+}
+
+/* Стили для кнопок "Удалить" */
+table td button {
+    padding: 4px 10px;
+    background-color: #A64600;
+    color: #FFAE73;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    margin-left: 10px;
+}
+/* Hover-эффект для кнопок удаления */
+table td button:hover {
+    background-color: #976e69;
     color: white;
-  }
-  .dark-theme   .task input[type="checkbox"]:checked + .title-task {
-    color: rgb(63, 63, 63)
-  }
-  .dark-theme form {
-    background-color: #a19e9a;  
-    border: 1px solid #ffffff; 
-  }
-  .dark-theme  input[type="text"]::placeholder {    
-    background-color: #5e5b5b;
-    color: rgb(255, 255, 255);    
-  } 
-  .dark-theme .zalupa{
-    background-color: #5e5b5b;
-    color: white;
-  }
+}
+
+
+/* Стили для чекбокса */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+/* Стиль для чекбокса при наведении */
+input[type="checkbox"]:hover {
+    background-color: #f0f0f0;
+}
+/* Скрыть стандартный чекбокс */
+input[type="checkbox"]::before {
+    content: "✘"; /* Символ крестика */
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: #ccc; /* Цвет символа (неактивный) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Отображаем символ крестика при выборе */
+input[type="checkbox"]:checked::before {
+    color: #337ab7; /* Цвет символа при выборе (активный) */
+}
+
+
+
+
+table tr td:nth-child(4n-2) {
+    background-color: #f7cbab; /* Цвет для второгго столбца */
+}
+/* Применяем разные цвета для второго и четвертого столбцов */
+table tr td:nth-child(4n-1) {
+    background-color: #f8c097; /* Цвет для третьего столбца */
+}
+.dark-theme table tr td:nth-child(4n-2) {
+    background-color: #5a5753; /* Цвет для второгго столбца */
+}
+/* Применяем разные цвета для второго и четвертого столбцов */
+.dark-theme table tr td:nth-child(4n-1) {
+    background-color: #333231; /* Цвет для третьего столбца */
+}
+

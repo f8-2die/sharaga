@@ -1,53 +1,58 @@
+<!-- App.vue -->
 <template>
   <div id="app">
-    <ChatWindow :messages="messages" />
-    <ChatInput @message-sent="sendMessage" @image-uploaded="sendImage" />
+    <chat-container :messages="messages" />
+    <chat-input @message="sendMessage" :initialNickname="nickname" @update:nickname="updateNickname($event)" />
   </div>
 </template>
 
 <script>
-import ChatWindow from "./components/ChatWindow.vue";
-import ChatInput from "./components/ChatInput.vue";
+import ChatContainer from './components/ChatContainer.vue';
+import ChatInput from './components/ChatInput.vue';
 
 export default {
-  name: "App",
-  components: {
-    ChatWindow,
-    ChatInput,
-  },
   data() {
     return {
       messages: [],
+      ws: null,
+      nickname: '', 
     };
   },
   methods: {
     sendMessage(message) {
-      this.messages.push({ type: "text", ...message });
-      this.updateLocalStorage();
+      if (this.nickname.trim() !== '' && this.ws.readyState === WebSocket.OPEN) {
+        this.ws.send(JSON.stringify(message));
+      } else {
+        alert('Введите никнейм');
+      }
     },
-    sendImage(image) {
-      this.messages.push({ type: "image", ...image });
-      this.updateLocalStorage();
+
+    updateNickname(newNickname) {
+      this.nickname = newNickname; // Обновляем nickname в родительском компоненте
     },
-    updateLocalStorage() {
-      localStorage.setItem('chatMessages', JSON.stringify(this.messages));
-      // Добавьте это обновление для уведомления других вкладок о изменениях
-      window.dispatchEvent(new Event('storage'));
-    },
+
   },
   created() {
-    const storedMessages = localStorage.getItem('chatMessages');
-    if (storedMessages) {
-      this.messages = JSON.parse(storedMessages);
-    }
-
-    // Добавьте слушатель события storage для обновления сообщений в реальном времени
-    window.addEventListener('storage', () => {
-      const storedMessages = localStorage.getItem('chatMessages');
-      if (storedMessages) {
-        this.messages = JSON.parse(storedMessages);
+    // Инициализация WebSocket соединения при создании компонента
+    this.ws = new WebSocket('ws://localhost:8080');
+    
+    // Обработчик входящих сообщений по WebSocket
+    this.ws.onmessage = async (event) => {
+      const parsedMessage = JSON.parse(event.data);
+      if (parsedMessage.type === 'text' || parsedMessage.type === 'image') {
+        this.messages.push({ type: parsedMessage.type, content: parsedMessage.content, nickname: parsedMessage.nickname });
       }
-    });
+    };
+  },
+  components: {
+    ChatContainer,
+    ChatInput,
   },
 };
 </script>
+
+<style>
+@import 'components/styles.css';
+</style>
+
+

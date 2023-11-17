@@ -1,4 +1,4 @@
-# vue-chat-app
+# simple-chat-app
 
 ## Project setup
 ```
