@@ -1,24 +1,19 @@
 # simple-chat-app
 
-## Project setup
+## Project setup (установка используемых зависимостей)
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start websocket (запускаем сервак)
+```
+node server.js
+```
+
+### Start vue app (запускаем фронт)
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### По всем вопросам
+See [my vk](https://vk.com/f8_2die).
