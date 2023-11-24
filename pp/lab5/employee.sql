@@ -1,0 +1,1 @@
+SELECT * FROM employee_db.employee LIMIT 0, 1000
